@@ -1,4 +1,4 @@
-/*  RetroArch - A frontend for libretro.
+/*  RetroArch - A frontend for libretro. teste 01
  *  Copyright (C) 2010-2014 - Hans-Kristian Arntzen
  *  Copyright (C) 2011-2017 - Daniel De Matteis
  *  Copyright (C) 2021      - David G.F.
