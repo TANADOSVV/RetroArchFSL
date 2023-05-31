@@ -230,7 +230,7 @@ DEFAULT_SUBLABEL_MACRO(menu_action_sublabel_setting_audio_mixer_stream_volume,
 #endif
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_accessibility_enabled, MENU_ENUM_SUBLABEL_ACCESSIBILITY_ENABLED)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_accessibility_narrator_speech_speed, MENU_ENUM_SUBLABEL_ACCESSIBILITY_NARRATOR_SPEECH_SPEED)
-
+DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_musica_no_menu_option,            MENU_ENUM_SUBLABEL_MUSICA_NO_MENU_OPTION)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_load_config,                      MENU_ENUM_SUBLABEL_CONFIGURATIONS)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_save_current_config,              MENU_ENUM_SUBLABEL_SAVE_CURRENT_CONFIG)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_save_new_config,                  MENU_ENUM_SUBLABEL_SAVE_NEW_CONFIG)
@@ -2145,6 +2145,9 @@ int menu_cbs_init_bind_sublabel(menu_file_list_cbs_t *cbs,
       {
          switch (input_config_bind_map_get_retro_key(bind_index))
          {
+            case MENU_ENUM_LABEL_MUSICA_NO_MENU_OPTION:
+               BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_musica_no_menu_option);
+               break;
             case RARCH_ENABLE_HOTKEY:
                BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_input_meta_enable_hotkey);
                return 0;

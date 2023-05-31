@@ -2439,6 +2439,8 @@ static struct config_int_setting *populate_settings_int(
    unsigned count                     = 0;
    struct config_int_setting  *tmp    = (struct config_int_setting*)calloc((*size + 1), sizeof(struct config_int_setting));
 
+   SETTING_INT("musica_no_menu_option", &settings->ints.musica_no_menu_option, true, musica_no_menu_option, false);
+
    if (!tmp)
       return NULL;
 

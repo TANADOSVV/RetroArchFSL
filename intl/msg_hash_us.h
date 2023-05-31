@@ -11,7 +11,7 @@
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_MAIN_MENU,
    "Main Menu"
-   )
+   ) 
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_SETTINGS_TAB,
    "Settings"
@@ -1726,7 +1726,12 @@ MSG_HASH(
    )
 
 /* Settings > Video */
-
+MSG_HASH(
+  MENU_ENUM_LABEL_VALUE_MUSICA_NO_MENU_OPTION,
+   "Musica no menu")
+MSG_HASH(
+   MENU_ENUM_SUBLABEL_MUSICA_NO_MENU_OPTION,
+   "Reproduzir musica no menu")
 MSG_HASH(
    MENU_ENUM_LABEL_VALUE_CRT_SWITCHRES_SETTINGS,
    "CRT SwitchRes"

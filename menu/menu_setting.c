@@ -9303,7 +9303,17 @@ static bool setting_append_list(
          START_GROUP(list, list_info, &group_info, msg_hash_to_str(MENU_ENUM_LABEL_MAIN_MENU), parent_group);
          MENU_SETTINGS_LIST_CURRENT_ADD_ENUM_IDX_PTR(list, list_info, MENU_ENUM_LABEL_MAIN_MENU);
          START_SUB_GROUP(list, list_info, "State", &group_info, &subgroup_info, parent_group);
-
+         CONFIG_INT(
+               list, list_info,
+               &settings->ints.musica_no_menu_option, 
+               MENU_ENUM_LABEL_MUSICA_NO_MENU_OPTION, 
+               MENU_ENUM_LABEL_VALUE_MUISCA_NO_MENU_OPTION, 
+               muisca_no_menu_option, 
+               &group_info, 
+               &subgroup_info, 
+               parent_group, 
+               general_write_handler, 
+               general_read_handler);
          CONFIG_INT(
                list, list_info,
                &settings->ints.state_slot,

@@ -1730,4 +1730,6 @@
 
 #define DEFAULT_FILTER_BY_CURRENT_CORE false
 
+static const int musica_no_menu_option = 0;
+
 #endif

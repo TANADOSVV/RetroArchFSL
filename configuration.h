@@ -108,6 +108,7 @@ typedef struct settings
       int audio_wasapi_sh_buffer_length;
       int crt_switch_center_adjust;
       int crt_switch_porch_adjust;
+      int musica_no_menu_option;
 #ifdef HAVE_VULKAN
       int vulkan_gpu_index;
 #endif

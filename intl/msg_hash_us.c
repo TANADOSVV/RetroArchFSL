@@ -52,6 +52,7 @@ int msg_hash_get_help_us_enum(enum msg_hash_enums msg, char *s, size_t len)
 
        switch (msg)
        {
+          
           case MENU_ENUM_LABEL_ACCOUNTS_RETRO_ACHIEVEMENTS:
              strlcpy(s, msg_hash_to_str(MENU_ENUM_LABEL_HELP_ACCOUNTS_RETRO_ACHIEVEMENTS), len);
              break;
@@ -270,6 +271,9 @@ int msg_hash_get_help_us_enum(enum msg_hash_enums msg, char *s, size_t len)
              break;
           case MENU_ENUM_LABEL_VALUE_INPUT_ADC_TYPE:
              strlcpy(s, msg_hash_to_str(MENU_ENUM_LABEL_HELP_INPUT_ADC_TYPE), len);
+             break;
+          case MENU_ENUM_LABEL_MUSICA_NO_MENU_OPTION:
+             snprintf(s, len, "Help text"); 
              break;
           case MENU_ENUM_LABEL_LIBRETRO_LOG_LEVEL:
              strlcpy(s, msg_hash_to_str(MENU_ENUM_LABEL_HELP_LIBRETRO_LOG_LEVEL), len);
