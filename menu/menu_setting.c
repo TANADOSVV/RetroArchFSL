@@ -9305,17 +9305,6 @@ static bool setting_append_list(
          START_SUB_GROUP(list, list_info, "State", &group_info, &subgroup_info, parent_group);
          CONFIG_INT(
                list, list_info,
-               &settings->ints.musica_no_menu_option, 
-               MENU_ENUM_LABEL_MUSICA_NO_MENU_OPTION, 
-               MENU_ENUM_LABEL_VALUE_MUSICA_NO_MENU_OPTION, 
-               musica_no_menu_option, 
-               &group_info, 
-               &subgroup_info, 
-               parent_group, 
-               general_write_handler, 
-               general_read_handler);
-         CONFIG_INT(
-               list, list_info,
                &settings->ints.state_slot,
                MENU_ENUM_LABEL_STATE_SLOT,
                MENU_ENUM_LABEL_VALUE_STATE_SLOT,
@@ -13256,7 +13245,17 @@ static bool setting_append_list(
                general_read_handler,
                SD_FLAG_NONE
                );
-
+         CONFIG_BOOL(
+               list, list_info,
+               &settings->bools.musica_no_menu_option, 
+               MENU_ENUM_LABEL_MUSICA_NO_MENU_OPTION, 
+               MENU_ENUM_LABEL_VALUE_MUSICA_NO_MENU_OPTION, 
+               musica_no_menu_option, 
+               &group_info, 
+               &subgroup_info, 
+               parent_group, 
+               general_write_handler, 
+               general_read_handler);
          END_SUB_GROUP(list, list_info, parent_group);
          END_GROUP(list, list_info, parent_group);
          break;
