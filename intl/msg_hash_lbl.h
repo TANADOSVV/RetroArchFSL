@@ -14,9 +14,6 @@ MSG_HASH(
    MENU_ENUM_LABEL_ACCOUNTS_CHEEVOS_USERNAME,
    "accounts_cheevos_username"
    )
-MSG_HASH(MENU_ENUM_LABEL_MUSICA_NO_MENU_OPTION, 
-   "musica_no_menu_option"
-)
 MSG_HASH(
    MENU_ENUM_LABEL_ACCOUNTS_LIST,
    "accounts_list"
@@ -5646,6 +5643,9 @@ MSG_HASH(
 MSG_HASH(
    MENU_ENUM_LABEL_MENU_SOUND_SCROLL,
    "menu_sound_scroll"
+   )
+   MSG_HASH(MENU_ENUM_LABEL_MUSICA_NO_MENU_OPTION, 
+   "musica_no_menu_option"
    )
 MSG_HASH(
    MENU_ENUM_LABEL_CONTENT_RUNTIME_LOG,

@@ -108,7 +108,6 @@ typedef struct settings
       int audio_wasapi_sh_buffer_length;
       int crt_switch_center_adjust;
       int crt_switch_porch_adjust;
-      int musica_no_menu_option;
 #ifdef HAVE_VULKAN
       int vulkan_gpu_index;
 #endif
@@ -683,6 +682,7 @@ typedef struct settings
 #ifdef HAVE_LAKKA
       bool menu_show_eject_disc;
 #endif
+      bool musica_no_menu_option;
       bool menu_show_information;
       bool menu_show_configurations;
       bool menu_show_help;

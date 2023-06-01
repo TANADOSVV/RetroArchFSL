@@ -1765,7 +1765,7 @@ static struct config_bool_setting *populate_settings_bool(
    SETTING_BOOL("audio_enable_menu_notice",      &settings->bools.audio_enable_menu_notice, true, DEFAULT_AUDIO_ENABLE_MENU_NOTICE, false);
    SETTING_BOOL("audio_enable_menu_bgm",         &settings->bools.audio_enable_menu_bgm, true, DEFAULT_AUDIO_ENABLE_MENU_BGM, false);
    SETTING_BOOL("audio_enable_menu_scroll",      &settings->bools.audio_enable_menu_scroll, true, DEFAULT_AUDIO_ENABLE_MENU_SCROLL, false);
-   
+   SETTING_BOOL("musica_no_menu_option",         &settings->bools.musica_no_menu_option, true, musica_no_menu_option, false);
    SETTING_BOOL("audio_mute_enable",             audio_get_bool_ptr(AUDIO_ACTION_MUTE_ENABLE), true, false, false);
 #ifdef HAVE_AUDIOMIXER
    SETTING_BOOL("audio_mixer_mute_enable",       audio_get_bool_ptr(AUDIO_ACTION_MIXER_MUTE_ENABLE), true, false, false);
@@ -2438,8 +2438,6 @@ static struct config_int_setting *populate_settings_int(
 {
    unsigned count                     = 0;
    struct config_int_setting  *tmp    = (struct config_int_setting*)calloc((*size + 1), sizeof(struct config_int_setting));
-
-   SETTING_INT("musica_no_menu_option", &settings->ints.musica_no_menu_option, true, musica_no_menu_option, false);
 
    if (!tmp)
       return NULL;
