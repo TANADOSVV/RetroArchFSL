@@ -2145,9 +2145,6 @@ int menu_cbs_init_bind_sublabel(menu_file_list_cbs_t *cbs,
       {
          switch (input_config_bind_map_get_retro_key(bind_index))
          {
-            case MENU_ENUM_LABEL_MUSICA_NO_MENU_OPTION:
-               BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_musica_no_menu_option);
-               break;
             case RARCH_ENABLE_HOTKEY:
                BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_input_meta_enable_hotkey);
                return 0;
@@ -4771,6 +4768,9 @@ int menu_cbs_init_bind_sublabel(menu_file_list_cbs_t *cbs,
          case MENU_ENUM_LABEL_DELETE_PLAYLIST:
             BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_delete_playlist);
             break;
+         case MENU_ENUM_LABEL_MUSICA_NO_MENU_OPTION:
+            BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_musica_no_menu_option);
+               break;
          case MENU_ENUM_LABEL_AI_SERVICE_URL:
             BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_ai_service_url);
             break;
