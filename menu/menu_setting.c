@@ -13253,12 +13253,13 @@ static bool setting_append_list(
                DEFAULT_MUSICA_NO_MENU_OPTION,
                MENU_ENUM_LABEL_OFF,
                MENU_ENUM_LABEL_ON,
-               musica_no_menu_option, 
                &group_info, 
                &subgroup_info, 
                parent_group, 
                general_write_handler, 
-               general_read_handler);
+               general_read_handler,
+               SD_FLAG_NONE
+               );
          END_SUB_GROUP(list, list_info, parent_group);
          END_GROUP(list, list_info, parent_group);
          break;

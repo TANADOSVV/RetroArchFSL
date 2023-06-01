@@ -1726,9 +1726,7 @@ MSG_HASH(
    )
 
 /* Settings > Video */
-MSG_HASH(
-  MENU_ENUM_LABEL_VALUE_MUSICA_NO_MENU_OPTION,
-   "Musica no menu")
+
 MSG_HASH(
    MENU_ENUM_SUBLABEL_MUSICA_NO_MENU_OPTION,
    "Reproduzir musica no menu")
@@ -2860,7 +2858,10 @@ MSG_HASH(
    MENU_ENUM_LABEL_VALUE_MENU_SOUND_SCROLL,
    "Enable 'Scroll' Sounds"
    )
-
+MSG_HASH(
+  MENU_ENUM_LABEL_VALUE_MUSICA_NO_MENU_OPTION,
+   "Musica no menu")
+   
 /* Settings > Input */
 
 MSG_HASH(
