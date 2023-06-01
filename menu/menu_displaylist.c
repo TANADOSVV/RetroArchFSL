@@ -3099,7 +3099,7 @@ error:
    return -1;
 }
 #endif
-int menu_displaylist_parse_settings_enum(
+   menu_displaylist_parse_settings_enum(
       menu, info, MENU_ENUM_LABEL_MUSICA_NO_MENU_OPTION, PARSE_ONLY_INT);
 int menu_displaylist_parse_settings_enum(
       file_list_t *info_list,
