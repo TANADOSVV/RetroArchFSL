@@ -10273,7 +10273,7 @@ unsigned menu_displaylist_build_list(
                {MENU_ENUM_LABEL_MENU_SOUND_NOTICE, PARSE_ONLY_BOOL},
                {MENU_ENUM_LABEL_MENU_SOUND_BGM,    PARSE_ONLY_BOOL},
                {MENU_ENUM_LABEL_MENU_SOUND_SCROLL, PARSE_ONLY_BOOL},
-               {MENU_ENUM_LABEL_MUSICA_NO_MENU_OPTION, PARSE_ONLY_INT},
+               {MENU_ENUM_LABEL_MUSICA_NO_MENU_OPTION, PARSE_ONLY_BOOL},
             };
            
             for (i = 0; i < ARRAY_SIZE(build_list); i++)
