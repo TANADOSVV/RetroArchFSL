@@ -13247,10 +13247,10 @@ static bool setting_append_list(
                );
          CONFIG_BOOL(
                list, list_info,
-               &settings->bools.musica_no_menu_option, 
+               &settings->bools.audio_enable_musica_no_menu_option, 
                MENU_ENUM_LABEL_MUSICA_NO_MENU_OPTION, 
                MENU_ENUM_LABEL_VALUE_MUSICA_NO_MENU_OPTION,
-               DEFAULT_MUSICA_NO_MENU_OPTION,
+               DEFAULT_AUDIO_ENABLE_MUSICA_NO_MENU_OPTION,
                MENU_ENUM_LABEL_OFF,
                MENU_ENUM_LABEL_ON,
                &group_info, 

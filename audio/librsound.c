@@ -96,7 +96,7 @@
 /* Internal enumerations */
 enum rsd_logtype
 {
-   RSD_LOG_DEBUG = 0,
+   RSD_LOG_DEBUG = 1,
    RSD_LOG_WARN,
    RSD_LOG_ERR
 };

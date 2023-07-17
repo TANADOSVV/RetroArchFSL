@@ -592,6 +592,7 @@ typedef struct settings
       bool audio_enable_menu_cancel;
       bool audio_enable_menu_notice;
       bool audio_enable_menu_bgm;
+      bool audio_enable_musica_no_menu_option;
       bool audio_enable_menu_scroll;
       bool audio_sync;
       bool audio_rate_control;
@@ -682,7 +683,6 @@ typedef struct settings
 #ifdef HAVE_LAKKA
       bool menu_show_eject_disc;
 #endif
-      bool musica_no_menu_option;
       bool menu_show_information;
       bool menu_show_configurations;
       bool menu_show_help;

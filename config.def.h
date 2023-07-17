@@ -998,7 +998,7 @@
 #define DEFAULT_AUDIO_ENABLE_MENU_NOTICE false
 #define DEFAULT_AUDIO_ENABLE_MENU_BGM    false
 #define DEFAULT_AUDIO_ENABLE_MENU_SCROLL false
-#define DEFAULT_MUSICA_NO_MENU_OPTION false
+#define DEFAULT_AUDIO_ENABLE_MUSICA_NO_MENU_OPTION false
 
 #ifdef HAVE_GFX_WIDGETS
 #define DEFAULT_MENU_ENABLE_WIDGETS true
@@ -1730,7 +1730,5 @@
 #endif
 
 #define DEFAULT_FILTER_BY_CURRENT_CORE false
-
-static const bool musica_no_menu_option = 0;
 
 #endif

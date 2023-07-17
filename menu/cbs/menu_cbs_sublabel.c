@@ -230,7 +230,6 @@ DEFAULT_SUBLABEL_MACRO(menu_action_sublabel_setting_audio_mixer_stream_volume,
 #endif
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_accessibility_enabled, MENU_ENUM_SUBLABEL_ACCESSIBILITY_ENABLED)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_accessibility_narrator_speech_speed, MENU_ENUM_SUBLABEL_ACCESSIBILITY_NARRATOR_SPEECH_SPEED)
-DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_musica_no_menu_option,            MENU_ENUM_SUBLABEL_MUSICA_NO_MENU_OPTION)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_load_config,                      MENU_ENUM_SUBLABEL_CONFIGURATIONS)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_save_current_config,              MENU_ENUM_SUBLABEL_SAVE_CURRENT_CONFIG)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_save_new_config,                  MENU_ENUM_SUBLABEL_SAVE_NEW_CONFIG)
@@ -538,6 +537,7 @@ DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_video_refresh_rate_polled,     MENU_
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_audio_enable,                  MENU_ENUM_SUBLABEL_AUDIO_ENABLE)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_audio_enable_menu,             MENU_ENUM_SUBLABEL_AUDIO_ENABLE_MENU)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_menu_sounds,                   MENU_ENUM_SUBLABEL_MENU_SOUNDS)
+DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_musica_no_menu_option,         MENU_ENUM_SUBLABEL_MUSICA_NO_MENU_OPTION)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_audio_max_timing_skew,         MENU_ENUM_SUBLABEL_AUDIO_MAX_TIMING_SKEW)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_pause_nonactive,               MENU_ENUM_SUBLABEL_PAUSE_NONACTIVE)
 DEFAULT_SUBLABEL_MACRO(action_bind_sublabel_pause_on_disconnect,           MENU_ENUM_SUBLABEL_PAUSE_ON_DISCONNECT)
@@ -4212,6 +4212,9 @@ int menu_cbs_init_bind_sublabel(menu_file_list_cbs_t *cbs,
          case MENU_ENUM_LABEL_AUDIO_ENABLE_MENU:
             BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_audio_enable_menu);
             break;
+         case MENU_ENUM_LABEL_MUSICA_NO_MENU_OPTION:
+            BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_musica_no_menu_option);
+               break;
          case MENU_ENUM_LABEL_MENU_SOUNDS:
             BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_menu_sounds);
             break;
@@ -4768,9 +4771,6 @@ int menu_cbs_init_bind_sublabel(menu_file_list_cbs_t *cbs,
          case MENU_ENUM_LABEL_DELETE_PLAYLIST:
             BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_delete_playlist);
             break;
-         case MENU_ENUM_LABEL_MUSICA_NO_MENU_OPTION:
-            BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_musica_no_menu_option);
-               break;
          case MENU_ENUM_LABEL_AI_SERVICE_URL:
             BIND_ACTION_SUBLABEL(cbs, action_bind_sublabel_ai_service_url);
             break;

@@ -1331,6 +1331,13 @@ static void audio_driver_load_menu_bgm_callback(retro_task_t *task,
    if (!(flags & CONTENT_ST_FLAG_IS_INITED))
       audio_driver_mixer_play_menu_sound_looped(AUDIO_MIXER_SYSTEM_SLOT_BGM);
 }
+static void audio_driver_load_menu_mmenu_callback(retro_task_t *task,
+      void *task_data, void *user_data, const char *error)
+{
+   uint8_t flags = content_get_flags();
+   if (!(flags & CONTENT_ST_FLAG_IS_INITED))
+      audio_driver_mixer_play_menu_sound_looped(AUDIO_MIXER_SYSTEM_SLOT_MMENU);
+}
 
 void audio_driver_load_system_sounds(void)
 {
@@ -1345,6 +1352,7 @@ void audio_driver_load_system_sounds(void)
    const bool audio_enable_menu_notice   = audio_enable_menu && settings->bools.audio_enable_menu_notice;
    const bool audio_enable_menu_bgm      = audio_enable_menu && settings->bools.audio_enable_menu_bgm;
    const bool audio_enable_menu_scroll   = audio_enable_menu && settings->bools.audio_enable_menu_scroll;
+   const bool audio_enable_menu_musica   = audio_enable_menu && settings->bools.audio_enable_musica_no_menu_option;
    const bool audio_enable_cheevo_unlock = settings->bools.cheevos_unlock_sound_enable;
    const char *path_ok                   = NULL;
    const char *path_cancel               = NULL;
@@ -1354,6 +1362,7 @@ void audio_driver_load_system_sounds(void)
    const char *path_cheevo_unlock        = NULL;
    const char *path_up                   = NULL;
    const char *path_down                 = NULL;
+   const char *path_mmenu                 = NULL;
    struct string_list *list              = NULL;
    struct string_list *list_fallback     = NULL;
    unsigned i                            = 0;
@@ -1425,6 +1434,8 @@ void audio_driver_load_system_sounds(void)
             path_up = path;
          else if (string_is_equal_noncase(basename_noext, "down"))
             path_down = path;
+         else if (string_is_equal_noncase(basename_noext, "teste"))
+            path_mmenu = path;
       }
    }
 
@@ -1438,8 +1449,22 @@ void audio_driver_load_system_sounds(void)
       if (path_notice_back)
           task_push_audio_mixer_load(path_notice_back, NULL, NULL, true, AUDIO_MIXER_SLOT_SELECTION_MANUAL, AUDIO_MIXER_SYSTEM_SLOT_NOTICE_BACK);
    }
-   if (path_bgm && audio_enable_menu_bgm)
+   if (path_bgm && audio_enable_menu_bgm){
+      if(audio_enable_menu_musica){
+         rename("assets/sounds/bgm.ogg", "assets/sounds/bgmOld.ogg");
+         rename("assets/sounds/BGM.wav", "assets/sounds/BGMOld.wav");
+         rename("assets/sounds/teste.mp3", "assets/sounds/bgm.mp3");
+         rename("assets/sounds/teste1.mp3", "assets/sounds/BGM.mp3");
+      }
+      if(audio_enable_menu_musica==false){
+         rename("assets/sounds/bgm.mp3", "assets/sounds/teste.mp3");
+         rename("assets/sounds/BGM.mp3", "assets/sounds/teste1.mp3");
+         rename("assets/sounds/bgmOld.ogg", "assets/sounds/bgm.ogg");
+         rename("assets/sounds/BGMOLD.wav", "assets/sounds/BGM.wav");
+      }
+
       task_push_audio_mixer_load(path_bgm, audio_driver_load_menu_bgm_callback, NULL, true, AUDIO_MIXER_SLOT_SELECTION_MANUAL, AUDIO_MIXER_SYSTEM_SLOT_BGM);
+   }
    if (path_cheevo_unlock && audio_enable_cheevo_unlock)
       task_push_audio_mixer_load(path_cheevo_unlock, NULL, NULL, true, AUDIO_MIXER_SLOT_SELECTION_MANUAL, AUDIO_MIXER_SYSTEM_SLOT_ACHIEVEMENT_UNLOCK);
    if (audio_enable_menu_scroll) 
